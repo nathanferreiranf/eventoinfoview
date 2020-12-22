@@ -82,14 +82,16 @@
                     <div class="col-12">
                         <div class="form-group">
                             <label>Curriculo:</label>
-                            <editor-component value="{{ old('descricao') }}" />
-                            @error('descricao')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <editor-component value="{{ old('descricao') }}"></editor-component>
                         </div>
                     </div>
+                    @error('descricao')
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
+                        </div>
+                    @enderror
                 </div>
 
                 <div class="form-row">
