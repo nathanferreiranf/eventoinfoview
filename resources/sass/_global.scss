@@ -1,0 +1,212 @@
+.btn-back{
+    text-decoration: none !important;
+    font-size: 1.6rem;
+    font-weight: bold;
+    &:hover{
+        color: rgba(0, 0, 0, 0.6) !important;
+    }
+}
+
+.dropdown-filtro{
+    .dropdown-menu{
+        padding: 0;
+        .dropdown-item{
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+#banner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% center;
+    width: 100%;
+    min-height: 400px;
+    height: calc(100vh - 500px);
+}
+
+.section{
+    .section-header{
+        a{
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+    .section-body{
+        .tarja{
+            display: flex;
+            align-items: center;
+            span{
+                color: #ff4441;
+                font-weight: bold;
+                margin-left: 4px;
+            }
+            .dot{
+                width: 10px;
+                height: 10px;
+                color: #ff4441;
+            }
+        }
+    }
+}
+
+#section-video{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "video"
+                        "infos"
+                        "description"
+                        "tabs";
+    #video-sala{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+
+        width: 100%;
+        height: 30vh;
+        grid-area: video;
+        iframe{
+            position: absolute;
+            height: 100%;
+            border: 0px none;
+            width: 100%;
+        }
+    }
+    #video-infos{
+        padding: 15px;
+        grid-area: infos;
+        .tarja{
+            display: flex;
+            align-items: center;
+            span{
+                color: #ff4441;
+                font-weight: bold;
+                margin-left: 4px;
+            }
+            .dot{
+                width: 10px;
+                height: 10px;
+                color: #ff4441;
+            }
+        }
+    }
+    #video-description{
+        padding: 0 15px;
+        grid-area: description;
+    }
+    #video-tabs{
+        grid-area: tabs;
+    }
+}
+
+.nav-tabs-sala{
+    .nav-item{
+        .nav-link{
+            background-color: rgb(74 95 155) !important;
+            border-radius: 50%;
+            border: 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .active{
+            background-color: rgba(74,95,155, 0.6) !important;
+            color: #fff !important;
+        }
+    }
+}
+.tab-content-sala{
+    .tab-pane{
+        iframe{
+            min-height: calc(100vh - 155px); 
+            border: 0;
+        }
+    }
+}
+
+.tarja-sala{
+    display: flex;
+    align-items: center;
+    span{
+        color: #ff4441;
+        font-weight: bold;
+        margin-left: 4px;
+    }
+    .dot{
+        width: 10px;
+        height: 10px;
+        color: #ff4441;
+    }
+}
+
+.navbar-menu{
+    padding: 0 !important;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #section-video{
+        #video-sala{
+            position: relative;
+            width: 100%;
+            height: 80vh;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #section-video{
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "video tabs"
+                            "infos tabs"
+                            "description tabs";
+        grid-gap: 15px;
+        padding: 15px;
+        #video-sala{
+            position: relative;
+            width: 100%;
+            height: 70vh;
+        }
+        #video-infos{
+            padding: 0;
+        }
+        #video-description{
+            padding: 0;
+        }
+        #video-tabs{
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            height: 70vh;
+            #myTabContent{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                .tab-pane{
+                    position: relative;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }

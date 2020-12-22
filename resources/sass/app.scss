@@ -1,0 +1,26 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+// Variables
+@import 'variables';
+@import 'global';
+@import 'cards';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.card-columns {
+    column-gap: 0.8rem !important;
+    @include media-breakpoint-only(sm) {
+        column-count: 2;
+    }
+    @include media-breakpoint-only(md) {
+        column-count: 2;
+    }
+    @include media-breakpoint-only(lg) {
+        column-count: 3;
+    }
+    @include media-breakpoint-only(xl) {
+        column-count: 4;
+    }
+}

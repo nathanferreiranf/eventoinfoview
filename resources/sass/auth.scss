@@ -1,0 +1,78 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+// Variables
+@import 'variables';
+
+.required:after {
+    content:" *"; 
+    color: red;
+}
+
+#auth-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .container-fluid{
+        #card-login{
+            width: 80%;
+            margin: 0 auto;
+            border: 0;
+            background-color: transparent;
+            .card-header{
+                background-color: transparent;
+                border: 0;
+                h4{
+                    font-weight: bold;
+                    margin: 0;
+                }
+            }
+            .card-body{
+                overflow-y: auto;
+                max-height: 500px;
+                label{
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                }
+                .btn-link{
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    color: #000;
+                }
+                input{
+                    background-color: #f0f0f0;
+                }
+
+                .btn-login{
+                    background-color: rgba(25, 25, 25, 0.4);
+                }
+            }
+        }
+        #card-register{
+            width: 70%;
+            height: 500px;
+            margin: 0 auto;
+            border: 0;
+            overflow-y: auto;
+            .card-header{
+                background-color: #fff;
+                border: 0;
+            }
+        }
+        #card-reset{
+            .card-header{
+                background-color: #fff;
+                border: 0;
+            }
+        }
+        #banner{
+            background-color: #bdbdbd;
+            background-repeat: no-repeat;
+            background-position: 50% center;
+            background-size: cover;
+        }
+    }
+}
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
