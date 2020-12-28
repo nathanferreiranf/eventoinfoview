@@ -80,13 +80,13 @@
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
 
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <div class="form-check d-flex align-items-center p-0">
                                 <input class="form-check-input m-0" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                 <label class="form-check-label ml-4" for="remember">Me lembre</label>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="card-footer d-flex flex-column align-items-center justify-content-center bg-transparent">
                         <div class="form-group">
